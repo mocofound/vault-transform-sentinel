@@ -16,6 +16,7 @@ export VAULT_ADDR=http://localhost:8200
 export VAULT_TOKEN=changeme
 
 #License Vault Enterprise Advanced Data Protection (ADP)
+###Comment out this block if using Vault 1.8+ as license is now required to be bootstraped prior to starting Vault
 export VAULT_ENTERPRISE_LICENSE="01MV4UU43BK5HGYYTOJZ..."
 vault write sys/license text=$VAULT_ENTERPRISE_LICENSE
 
