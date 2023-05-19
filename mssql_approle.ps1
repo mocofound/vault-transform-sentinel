@@ -22,6 +22,8 @@
    "secret_id" = $SecretID
  }
  
+ [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls -bor [Net.SecurityProtocolType]::Tls11 -bor [Net.SecurityProtocolType]::Tls12
+ 
  #Get client token from approle login
  $Client_Token = Invoke-RestMethod -Method Post -Uri $VAULT_LOGIN_APPROLE -body $payload -header $approleheader 
  
