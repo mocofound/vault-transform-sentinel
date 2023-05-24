@@ -3,6 +3,7 @@ resource "vault_mount" "mount_transform" {
   path = "transform"
   type = "transform"
 }
+
 resource "vault_transform_role" "test" {
   #namespace = ""
   path = vault_mount.mount_transform.path
