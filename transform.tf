@@ -135,9 +135,9 @@ resource "vault_transform_alphabet" "email" {
 
 
 # #TODO: research misleading doc in registry
-data "vault_transform_encode" "test" {
-    path        = vault_transform_role.payments.path
-    role_name   = "payments"
-    batch_input = [{"value":"111-22-3333"}]
-    transformation = vault_transform_transformation.ssn.name
-}
+# data "vault_transform_encode" "test" {
+    #path        = vault_transform_role.payments.path
+    #role_name   = "payments"
+    #batch_input = [{"value":"111-22-3333"}]
+    #transformation = vault_transform_transformation.ssn.name
+#}
